@@ -5,6 +5,7 @@ module.exports = bot
 const Play = require('./commands/play')
 const Youtube = require('./commands/youtube')
 const Help = require('./commands/help')
+const config = require('./config')
 
 bot.on('ready', function(connection) {
     bot.user.setAvatar('./skull.jpg').catch(console.error)
@@ -30,4 +31,4 @@ bot.on('message', (message/*, user, guild, author*/) => {
 
 })
 
-bot.login('Mzg4MzIxODMwMDMwODAyOTQ0.DQrUlg.RnRck7o9oeoWVCIeP4Bro9l8F1w')
+bot.login(config.botToken)
