@@ -16,9 +16,6 @@ bot.on('guildMemberAdd', ({user, guild}) => {
 
 bot.on('message', (message) => {
 
-    /*if(message.content === '!help')
-        Help.commandsHelp(message, author, user, member, guild)*/
-
     if(message.content === '!help') {
         Help.commandsHelp(message);
         return;
